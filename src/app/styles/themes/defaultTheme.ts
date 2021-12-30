@@ -4,20 +4,30 @@ export const defaultTheme: DefaultTheme = {
   borderRadius: '4px',
   fontSize: {
     default: '8px',
-    h1: '24px',
+  },
+  fonts: {
+    default: 'DM Sans, sans-serif',
+    title: 'Poppins, sans-serif',
   },
   palette: {
     common: {
-      black: '#222831',
+      black: '#000000',
       white: '#ffffff',
     },
     primary: {
-      main: '#726a95',
+      main: '#FFFFFF',
       contrastText: '#ffffff',
     },
     secondary: {
-      main: '#709fb0',
+      main: '#000000',
       contrastText: '#ffffff',
+    },
+    background: {
+      primary: '#ffffff',
+      secondary: '#000000',
+      red: '',
+      blue: 'blue',
+      variant: '',
     },
   },
 }

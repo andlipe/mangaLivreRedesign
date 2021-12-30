@@ -1,8 +1,9 @@
 import type { AppProps } from 'next/app'
 import { ThemeProvider } from 'styled-components'
 import { QueryClient, QueryClientProvider } from 'react-query'
-import { GlobalStyle } from './styles/global'
-import themes from './styles/themes'
+import { GlobalStyle } from '../app/styles/global'
+import themes from '../app/styles/themes'
+import Layout from '../app/components/Layout'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -20,7 +21,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider theme={themes}>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
     </QueryClientProvider>
   )
