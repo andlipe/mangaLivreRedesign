@@ -1,7 +1,10 @@
-import styled from 'styled-components'
-
-const Title = styled.h1``
+import { HomeHighlight } from '../../modules/HomeHighlight'
+import * as S from './styles'
 
 export default function Home() {
-  return <Title>My 111</Title>
+  return (
+    <S.Container>
+      <HomeHighlight />
+    </S.Container>
+  )
 }

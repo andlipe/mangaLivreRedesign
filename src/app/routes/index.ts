@@ -1,6 +1,6 @@
 export default [
   {
-    href: '/',
+    href: '/Home',
     label: 'Home',
   },
   {

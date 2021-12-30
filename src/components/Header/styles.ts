@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   background: ${(props) => props.theme.palette.background.secondary};
-  width: 100%;
   font-size: 3rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 3rem 6rem;
 `
 export const Menu = styled.nav``

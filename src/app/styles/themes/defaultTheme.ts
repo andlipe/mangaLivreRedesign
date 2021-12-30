@@ -25,7 +25,7 @@ export const defaultTheme: DefaultTheme = {
     background: {
       primary: '#ffffff',
       secondary: '#000000',
-      red: '',
+      red: 'red',
       blue: 'blue',
       variant: '',
     },
