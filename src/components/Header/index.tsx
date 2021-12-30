@@ -1,8 +1,7 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import { Image, Link } from '@shared/components'
 import React from 'react'
-import { Button } from '..'
-import Logo from '../../assets/images/logo.svg'
+import { Button } from '@components/index'
+import Logo from '@assets/images/logo.svg'
 import * as S from './styles'
 
 interface HeaderProps {

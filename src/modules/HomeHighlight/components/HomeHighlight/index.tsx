@@ -1,10 +1,7 @@
-import Image from 'next/image'
 import React from 'react'
+import { Image } from '@shared/components'
 import * as S from './styles'
+
 export default function HomeHighlight() {
-  return (
-    <S.Container>
-      <Image />
-    </S.Container>
-  )
+  return <S.Container>{/* <Image /> */}</S.Container>
 }
