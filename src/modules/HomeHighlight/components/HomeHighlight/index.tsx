@@ -1,15 +1,18 @@
 import React from 'react'
 import { Image } from '@shared/components'
-import Luffy from '@assets/images/Luffy.png'
 import * as S from './styles'
 import SliderToggles from '../SliderToggles'
+import { useHighlight } from '@modules/HomeHighlight/hooks/useHighlight'
 
 export default function HomeHighlight() {
+  const { highlightsMangas, changeHighlightManga, highlightedManga } =
+    useHighlight()
+
   return (
     <S.Container>
       <S.ImageSection>
         <Image
-          src={Luffy}
+          src={highlightedManga!.image}
           width={120}
           height={170}
           alt="Anime character from selected manga"
@@ -18,11 +21,14 @@ export default function HomeHighlight() {
       <S.InfoSection>
         <S.ChapterNumberSection>
           <S.Text>Capitulo</S.Text>
-          <S.ChapterNumber>1363</S.ChapterNumber>
+          <S.ChapterNumber>{highlightedManga?.chapter}</S.ChapterNumber>
         </S.ChapterNumberSection>
         <S.SliderSection>
-          <S.Text>HOJE - 17:30</S.Text>
-          <SliderToggles />
+          <S.Text>{highlightedManga?.time}</S.Text>
+          <SliderToggles
+            options={highlightsMangas}
+            changeSelected={changeHighlightManga}
+          />
         </S.SliderSection>
       </S.InfoSection>
     </S.Container>
