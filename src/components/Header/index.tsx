@@ -11,7 +11,7 @@ interface HeaderProps {
 export default function Header({ routes }: HeaderProps) {
   return (
     <S.Container>
-      <Image alt="Firedev logo" src={Logo} width={148} height={36} />
+      <Image alt="MangaLivre Logo" src={Logo} width={148} height={34} />
       <S.Menu>
         {routes.map((link) => (
           <Link key={link.label} href={link.href}>

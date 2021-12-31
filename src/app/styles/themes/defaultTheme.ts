@@ -6,8 +6,8 @@ export const defaultTheme: DefaultTheme = {
     default: '8px',
   },
   fonts: {
-    default: 'DM Sans, sans-serif',
-    title: 'Poppins, sans-serif',
+    default: 'Montserrat, sans-serif',
+    title: 'Mouse Memoirs, sans-serif',
   },
   palette: {
     common: {
@@ -25,8 +25,8 @@ export const defaultTheme: DefaultTheme = {
     background: {
       primary: '#ffffff',
       secondary: '#000000',
-      red: 'red',
-      blue: 'blue',
+      red: '#A4251D',
+      blue: '#18A0FB',
       variant: '',
     },
   },
