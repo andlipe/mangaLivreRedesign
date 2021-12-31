@@ -1,7 +1,7 @@
-import { createContext, useMemo } from 'react'
+import { createContext, useEffect, useMemo } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'src/app/store'
-import { changeSelected } from '../slices/highlightSlice'
+import { changeSelected, increment } from '../slices/highlightSlice'
 import { IHighlightsMangas } from '../types/IHighlight'
 
 interface IHighlightContext {
@@ -18,7 +18,7 @@ export const HighlightContext = createContext({} as IHighlightContext)
 
 function HighlightProvider({ children }: IHighlightProvider) {
   const dispatch = useDispatch()
-  const { highlightsMangas } = useSelector(
+  const { highlightsMangas, counter } = useSelector(
     (state: RootState) => state.highlight
   )
 
@@ -30,6 +30,14 @@ function HighlightProvider({ children }: IHighlightProvider) {
   const changeHighlightManga = (id: number) => {
     dispatch(changeSelected(id))
   }
+
+  useEffect(() => {
+    const loop = setInterval(() => {
+      dispatch(increment())
+      changeHighlightManga(counter)
+    }, 5000)
+    return () => clearInterval(loop)
+  }, [counter])
 
   return (
     <HighlightContext.Provider

@@ -9,4 +9,5 @@ export interface IHighlightsMangas {
 
 export interface IHighlightState {
   highlightsMangas: IHighlightsMangas[]
+  counter: number
 }

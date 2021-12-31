@@ -37,6 +37,7 @@ const initialState: IHighlightState = {
       background: '#382730',
     },
   ],
+  counter: 1,
 }
 
 export const highlightSlice = createSlice({
@@ -51,10 +52,18 @@ export const highlightSlice = createSlice({
         manga.id === action.payload ? (manga.selected = true) : null
       })
     },
+    increment: (state) => {
+      console.log(state.counter)
+      if (state.counter === state.highlightsMangas.length) {
+        state.counter = 1
+      } else {
+        state.counter += 1
+      }
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { changeSelected } = highlightSlice.actions
+export const { changeSelected, increment } = highlightSlice.actions
 
 export default highlightSlice.reducer

@@ -7,7 +7,7 @@ import { useHighlight } from '@modules/HomeHighlight/hooks/useHighlight'
 export default function HomeHighlight() {
   const { highlightsMangas, changeHighlightManga, highlightedManga } =
     useHighlight()
-
+  console.log(highlightedManga)
   return (
     <S.Container backgroundColor={highlightedManga!.background}>
       <S.ImageSection>
