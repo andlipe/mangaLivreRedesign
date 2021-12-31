@@ -29,6 +29,13 @@ export const ChapterNumberSection = styled.div`
   margin-bottom: 2rem;
 `
 
+export const SliderSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+`
+
 export const ChapterNumber = styled.h3`
   font-family: ${(props) => props.theme.fonts.title};
   font-size: 6rem;

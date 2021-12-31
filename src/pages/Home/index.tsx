@@ -1,10 +1,12 @@
-import { HomeHighlight } from '@modules/HomeHighlight'
+import { HighlightProvider, HomeHighlight } from '@modules/HomeHighlight'
 import * as S from './styles'
 
 export default function Home() {
   return (
-    <S.Container>
-      <HomeHighlight />
-    </S.Container>
+    <HighlightProvider>
+      <S.Container>
+        <HomeHighlight />
+      </S.Container>
+    </HighlightProvider>
   )
 }

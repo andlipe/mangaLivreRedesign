@@ -20,10 +20,10 @@ export default function HomeHighlight() {
           <S.Text>Capitulo</S.Text>
           <S.ChapterNumber>1363</S.ChapterNumber>
         </S.ChapterNumberSection>
-        <section>
+        <S.SliderSection>
           <S.Text>HOJE - 17:30</S.Text>
           <SliderToggles />
-        </section>
+        </S.SliderSection>
       </S.InfoSection>
     </S.Container>
   )
