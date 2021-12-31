@@ -51,9 +51,8 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     button {
-        appearance: unset;
         border: none;
-
+        background-color: inherit;
     }
 
     h3 {

@@ -2,6 +2,7 @@ import React from 'react'
 import { Image } from '@shared/components'
 import Luffy from '@assets/images/Luffy.png'
 import * as S from './styles'
+import SliderToggles from '../SliderToggles'
 
 export default function HomeHighlight() {
   return (
@@ -9,8 +10,8 @@ export default function HomeHighlight() {
       <S.ImageSection>
         <Image
           src={Luffy}
-          width={150}
-          height={200}
+          width={120}
+          height={170}
           alt="Anime character from selected manga"
         />
       </S.ImageSection>
@@ -21,6 +22,7 @@ export default function HomeHighlight() {
         </S.ChapterNumberSection>
         <section>
           <S.Text>HOJE - 17:30</S.Text>
+          <SliderToggles />
         </section>
       </S.InfoSection>
     </S.Container>
