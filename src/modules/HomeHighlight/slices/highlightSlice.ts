@@ -18,7 +18,7 @@ const initialState: IHighlightState = {
       image: Luffy,
       time: 'Hoje - 18:40',
       selected: false,
-      background: '#A4251D',
+      background: '#A58038',
     },
     {
       id: 3,
@@ -26,7 +26,7 @@ const initialState: IHighlightState = {
       image: Luffy,
       time: 'Hoje - 18:40',
       selected: false,
-      background: '#A4251D',
+      background: '#37497F',
     },
     {
       id: 4,
@@ -34,7 +34,7 @@ const initialState: IHighlightState = {
       image: Luffy,
       time: 'Hoje - 18:40',
       selected: false,
-      background: '#A4251D',
+      background: '#382730',
     },
   ],
 }

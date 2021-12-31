@@ -9,7 +9,7 @@ export default function HomeHighlight() {
     useHighlight()
 
   return (
-    <S.Container>
+    <S.Container backgroundColor={highlightedManga!.background}>
       <S.ImageSection>
         <Image
           src={highlightedManga!.image}

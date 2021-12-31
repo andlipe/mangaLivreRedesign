@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
-export const Container = styled.section`
+interface IContainer {
+  backgroundColor: string
+}
+
+export const Container = styled.section<IContainer>`
   width: 100%;
-  background: ${(props) => props.theme.palette.background.red};
+  background: ${(props) => props.backgroundColor};
   display: grid;
   grid-template-areas: '. image info';
   grid-template-columns: repeat(3, 1fr);
