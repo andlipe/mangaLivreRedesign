@@ -28,7 +28,6 @@ export const ChapterNumberSection = styled.div`
   flex-direction: column;
   justify-content: center;
   height: 70%;
-  width: 100%;
   padding-left: 2rem;
   margin-bottom: 2rem;
 `
