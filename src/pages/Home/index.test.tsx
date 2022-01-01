@@ -5,7 +5,7 @@
 import React from 'react'
 import * as redux from 'react-redux'
 
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import Home from './index'
 import { ThemeProvider } from 'styled-components'
 import themes from '../../app/styles/themes'
