@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import type { NextApiRequest, NextApiResponse } from 'next'
 import axios from 'axios'
 
@@ -35,7 +36,7 @@ async function getHighlightMangas() {
   )
 }
 
-export default async (req: NextApiRequest, res: NextApiResponse<Data[]>) => {
+export default async (_req: NextApiRequest, res: NextApiResponse<Data[]>) => {
   const response = await getHighlightMangas()
   res.status(200).json(response)
 }
