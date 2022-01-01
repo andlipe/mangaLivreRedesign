@@ -1,13 +1,12 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { IHighlightState } from '../types/IHighlight'
-import Luffy from '@assets/images/Luffy.png'
 
 const initialState: IHighlightState = {
   highlightsMangas: [
     {
       id: 1,
       chapter: 1340,
-      image: Luffy,
+      image: '/Luffy.png',
       time: 'Hoje - 17:30',
       selected: true,
       background: '#A4251D',
@@ -15,7 +14,7 @@ const initialState: IHighlightState = {
     {
       id: 2,
       chapter: 14,
-      image: Luffy,
+      image: '/Luffy.png',
       time: 'Hoje - 18:40',
       selected: false,
       background: '#A58038',
@@ -23,7 +22,7 @@ const initialState: IHighlightState = {
     {
       id: 3,
       chapter: 0,
-      image: Luffy,
+      image: '/Luffy.png',
       time: 'Hoje - 18:40',
       selected: false,
       background: '#37497F',
@@ -31,7 +30,7 @@ const initialState: IHighlightState = {
     {
       id: 4,
       chapter: 0,
-      image: Luffy,
+      image: '/Luffy.png',
       time: 'Hoje - 18:40',
       selected: false,
       background: '#382730',

@@ -13,4 +13,5 @@ export const Menu = styled.nav``
 export const MenuLink = styled.a`
   font-size: 2rem;
   padding: 0 1rem;
+  cursor: pointer;
 `
