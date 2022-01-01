@@ -7,7 +7,7 @@ import { IHighlightsMangas } from '../types/IHighlight'
 interface IHighlightContext {
   highlightsMangas: IHighlightsMangas[]
   changeHighlightManga: (id: number) => void
-  highlightedManga: IHighlightsMangas | undefined
+  highlightedManga: IHighlightsMangas
 }
 
 interface IHighlightProvider {
@@ -23,7 +23,7 @@ function HighlightProvider({ children }: IHighlightProvider) {
   )
 
   const highlightedManga = useMemo(
-    () => highlightsMangas.find((manga) => manga.selected),
+    () => highlightsMangas.filter((manga) => manga.selected)[0],
     [highlightsMangas]
   )
 

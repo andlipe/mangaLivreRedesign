@@ -47,7 +47,7 @@ export default async (_req: NextApiRequest, res: NextApiResponse<Data[]>) => {
     {
       id: 7247,
       chapter: '856',
-      image: '/Apotheosis.png',
+      image: '/Aphoteosis.png',
       background: '1E142F',
       time: '2022-01-01T13:41:18-03:00',
       selected: false,
