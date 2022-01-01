@@ -8,8 +8,6 @@ export default function HomeHighlight() {
   const { highlightsMangas, changeHighlightManga, highlightedManga } =
     useHighlight()
 
-  console.log(highlightedManga)
-
   return (
     <S.Container backgroundColor={`#${highlightedManga?.background}` ?? '#fff'}>
       <S.ImageSection>
