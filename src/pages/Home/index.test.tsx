@@ -6,10 +6,10 @@ import React from 'react'
 import * as redux from 'react-redux'
 
 import { render } from '@testing-library/react'
-import Home from '../index'
+import Home from './index.page'
 import { ThemeProvider } from 'styled-components'
-import themes from '../../../app/styles/themes'
-import { store } from '../../../app/store'
+import themes from '../../app/styles/themes'
+import { store } from '../../app/store'
 
 describe('Home', () => {
   it('renders a My page', () => {
