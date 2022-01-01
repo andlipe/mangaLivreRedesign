@@ -6,12 +6,12 @@ import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { Button } from '..'
 import { ThemeProvider } from 'styled-components'
-import themes from '../../app/styles/themes'
+import { defaultTheme } from '@shared/themes/defaultTheme'
 
 describe('Button', () => {
   it('renders button', () => {
     render(
-      <ThemeProvider theme={themes}>
+      <ThemeProvider theme={defaultTheme}>
         <Button label="teste" />{' '}
       </ThemeProvider>
     )

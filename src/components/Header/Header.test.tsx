@@ -5,7 +5,7 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import { ThemeProvider } from 'styled-components'
-import themes from '../../app/styles/themes'
+import { defaultTheme } from '@shared/themes/defaultTheme'
 import Header from '.'
 
 const routes = [
@@ -16,7 +16,7 @@ const routes = [
 describe('Header', () => {
   it('renders Logo', () => {
     render(
-      <ThemeProvider theme={themes}>
+      <ThemeProvider theme={defaultTheme}>
         <Header routes={routes} />
       </ThemeProvider>
     )
@@ -27,7 +27,7 @@ describe('Header', () => {
 
   it('renders Navbar', () => {
     render(
-      <ThemeProvider theme={themes}>
+      <ThemeProvider theme={defaultTheme}>
         <Header routes={routes} />
       </ThemeProvider>
     )
@@ -38,7 +38,7 @@ describe('Header', () => {
 
   it('renders Navbar items', () => {
     render(
-      <ThemeProvider theme={themes}>
+      <ThemeProvider theme={defaultTheme}>
         <Header routes={routes} />
       </ThemeProvider>
     )

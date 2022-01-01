@@ -1,6 +1,6 @@
 export interface IHighlightsMangas {
   id: number
-  chapter: number
+  chapter: string
   image: string
   time: string
   selected: boolean
