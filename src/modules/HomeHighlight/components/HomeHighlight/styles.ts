@@ -19,6 +19,9 @@ export const ImageSection = styled.div`
 
 export const InfoSection = styled.div`
   grid-area: info;
+  @media screen and (max-width: 480px) {
+    display: none;
+  }
 `
 
 export const ChapterNumberSection = styled.div`
