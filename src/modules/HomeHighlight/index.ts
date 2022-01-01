@@ -10,5 +10,6 @@ export {
   highlightReducer,
   getHighlightMangas,
   setHighlightedMangas,
-  IHighlightsMangas,
 }
+
+export type { IHighlightsMangas }
