@@ -25,7 +25,7 @@ export const InfoSection = styled.div`
 `
 
 export const ChapterNumberSection = styled.div`
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2) 0 0);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
   border-bottom-left-radius: 4.5rem;
   display: flex;
   flex-direction: column;

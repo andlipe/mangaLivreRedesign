@@ -14,8 +14,8 @@ export default function HomeHighlight() {
         {highlightedManga?.image && (
           <Image
             src={highlightedManga?.image ?? ''}
-            width={120}
-            height={170}
+            width={400}
+            height={200}
             alt="Anime character from selected manga"
           />
         )}
