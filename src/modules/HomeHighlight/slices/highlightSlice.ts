@@ -2,40 +2,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { IHighlightsMangas, IHighlightState } from '../types/IHighlight'
 
 const initialState: IHighlightState = {
-  highlightsMangas: [
-    {
-      id: 1,
-      chapter: 1340,
-      image: '/Luffy.png',
-      time: 'Hoje - 17:30',
-      selected: true,
-      background: '#A4251D',
-    },
-    {
-      id: 2,
-      chapter: 14,
-      image: '/Luffy.png',
-      time: 'Hoje - 18:40',
-      selected: false,
-      background: '#A58038',
-    },
-    {
-      id: 3,
-      chapter: 0,
-      image: '/Luffy.png',
-      time: 'Hoje - 18:40',
-      selected: false,
-      background: '#37497F',
-    },
-    {
-      id: 4,
-      chapter: 0,
-      image: '/Luffy.png',
-      time: 'Hoje - 18:40',
-      selected: false,
-      background: '#382730',
-    },
-  ],
+  highlightsMangas: [],
   counter: 1,
 }
 
@@ -58,9 +25,8 @@ export const highlightSlice = createSlice({
       })
     },
     increment: (state) => {
-      console.log(state.counter)
-      if (state.counter === state.highlightsMangas.length) {
-        state.counter = 1
+      if (state.counter === state.highlightsMangas.length - 1) {
+        state.counter = 0
       } else {
         state.counter += 1
       }
@@ -69,6 +35,7 @@ export const highlightSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { changeSelected, increment } = highlightSlice.actions
+export const { changeSelected, increment, setHighlightedMangas } =
+  highlightSlice.actions
 
 export default highlightSlice.reducer

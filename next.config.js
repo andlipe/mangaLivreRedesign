@@ -1,6 +1,6 @@
 module.exports = {
   images: {
-    domains: ['live.staticflickr.com'],
+    domains: ['static3.mangalivre.net'],
   },
   pageExtensions: ['page.tsx', 'page.ts'],
   redirects() {

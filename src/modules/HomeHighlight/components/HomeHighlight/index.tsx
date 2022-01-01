@@ -7,15 +7,20 @@ import { useHighlight } from '@modules/HomeHighlight/hooks/useHighlight'
 export default function HomeHighlight() {
   const { highlightsMangas, changeHighlightManga, highlightedManga } =
     useHighlight()
+
+  console.log(highlightedManga)
+
   return (
-    <S.Container backgroundColor={highlightedManga?.background ?? '#fff'}>
+    <S.Container backgroundColor={`#${highlightedManga?.background}` ?? '#fff'}>
       <S.ImageSection>
-        <Image
-          src={highlightedManga?.image ?? ''}
-          width={120}
-          height={170}
-          alt="Anime character from selected manga"
-        />
+        {highlightedManga?.image && (
+          <Image
+            src={highlightedManga?.image ?? ''}
+            width={120}
+            height={170}
+            alt="Anime character from selected manga"
+          />
+        )}
       </S.ImageSection>
       <S.InfoSection>
         <S.ChapterNumberSection>

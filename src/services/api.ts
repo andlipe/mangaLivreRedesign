@@ -10,7 +10,7 @@ export const getError = (error: { response: { status: number } }) => {
 }
 
 export const useAPI = () => {
-  const baseURL = 'sample'
+  const baseURL = 'http://localhost:3000/api'
   const api = axios.create({
     baseURL,
     headers: {

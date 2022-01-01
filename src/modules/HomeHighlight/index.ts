@@ -1,5 +1,12 @@
 import HomeHighlight from './components/HomeHighlight'
 import { HighlightProvider } from './contexts'
-import highlightReducer from './slices/highlightSlice'
+import { getHighlightMangas } from './requests'
+import highlightReducer, { setHighlightedMangas } from './slices/highlightSlice'
 
-export { HomeHighlight, HighlightProvider, highlightReducer }
+export {
+  HomeHighlight,
+  HighlightProvider,
+  highlightReducer,
+  getHighlightMangas,
+  setHighlightedMangas,
+}

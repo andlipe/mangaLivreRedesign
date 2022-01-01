@@ -24,7 +24,7 @@ function HighlightProvider({ children }: IHighlightProvider) {
 
   const highlightedManga = useMemo(
     () => highlightsMangas.find((manga) => manga.selected),
-    highlightsMangas
+    [highlightsMangas]
   )
 
   const changeHighlightManga = (id: number) => {
@@ -34,10 +34,10 @@ function HighlightProvider({ children }: IHighlightProvider) {
   useEffect(() => {
     const loop = setInterval(() => {
       dispatch(increment())
-      changeHighlightManga(counter)
+      changeHighlightManga(highlightsMangas[counter]?.id)
     }, 5000)
     return () => clearInterval(loop)
-  }, [counter])
+  }, [counter, highlightsMangas.length])
 
   return (
     <HighlightContext.Provider
