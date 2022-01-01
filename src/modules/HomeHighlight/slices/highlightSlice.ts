@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { IHighlightState } from '../types/IHighlight'
+import { IHighlightsMangas, IHighlightState } from '../types/IHighlight'
 
 const initialState: IHighlightState = {
   highlightsMangas: [
@@ -43,6 +43,12 @@ export const highlightSlice = createSlice({
   name: 'highlight',
   initialState,
   reducers: {
+    setHighlightedMangas: (
+      state,
+      action: PayloadAction<IHighlightsMangas[]>
+    ) => {
+      state.highlightsMangas = action.payload
+    },
     changeSelected: (state, action: PayloadAction<number>) => {
       state.highlightsMangas.forEach((manga) => {
         if (manga.selected) {

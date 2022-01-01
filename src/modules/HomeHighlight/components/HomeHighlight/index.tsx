@@ -8,10 +8,10 @@ export default function HomeHighlight() {
   const { highlightsMangas, changeHighlightManga, highlightedManga } =
     useHighlight()
   return (
-    <S.Container backgroundColor={highlightedManga!.background}>
+    <S.Container backgroundColor={highlightedManga?.background ?? '#fff'}>
       <S.ImageSection>
         <Image
-          src={highlightedManga!.image}
+          src={highlightedManga?.image ?? ''}
           width={120}
           height={170}
           alt="Anime character from selected manga"
