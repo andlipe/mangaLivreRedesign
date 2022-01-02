@@ -40,4 +40,7 @@ export const Arrow = styled.button`
   cursor: pointer;
 `
 
-export const BodySection = styled.div``
+export const BodySection = styled.section`
+  margin-top: 3rem;
+  display: flex;
+`

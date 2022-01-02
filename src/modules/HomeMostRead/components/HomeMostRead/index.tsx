@@ -29,6 +29,8 @@ export default function HomeMostRead() {
       </S.HeaderSection>
       <S.BodySection>
         <MangaCard />
+        <MangaCard />
+        <MangaCard />
       </S.BodySection>
     </S.Container>
   )

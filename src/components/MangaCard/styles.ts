@@ -5,6 +5,7 @@ export const Container = styled.article`
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
   width: max-content;
   display: flex;
+  margin-right: 5rem;
 `
 
 export const ImageContainer = styled.section``
