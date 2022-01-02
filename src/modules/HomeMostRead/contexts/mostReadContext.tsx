@@ -1,3 +1,4 @@
+import { IMangaCard } from '@components/MangaCard'
 import { createContext } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from 'src/app/store'
@@ -8,6 +9,7 @@ interface IMostReadContext {
   handleBackPage: () => void
   currentPage: number
   pages: number
+  mostReadMangas: IMangaCard[]
 }
 
 interface IMostReadProvider {
@@ -30,9 +32,45 @@ function MostReadProvider({ children }: IMostReadProvider) {
     dispatch(changePage(currentPage - 1))
   }
 
+  const mostReadMangas = [
+    {
+      id: 1,
+      cover: '/cover.png',
+      category: 'Ação',
+      title: 'One Piece',
+      description:
+        'One Piece começa quando Gol D. Roger, o Rei Dos Piratas que possuiu tudo nesse mundo, antes de ser executado...',
+      stars: 4.5,
+    },
+    {
+      id: 2,
+      cover: '/cover.png',
+      category: 'Ação',
+      title: 'One Piece',
+      description:
+        'One Piece começa quando Gol D. Roger, o Rei Dos Piratas que possuiu tudo nesse mundo, antes de ser executado...',
+      stars: 2.5,
+    },
+    {
+      id: 3,
+      cover: '/cover.png',
+      category: 'Ação',
+      title: 'One Piece',
+      description:
+        'One Piece começa quando Gol D. Roger, o Rei Dos Piratas que possuiu tudo nesse mundo, antes de ser executado...',
+      stars: 3,
+    },
+  ]
+
   return (
     <MostReadContext.Provider
-      value={{ handleNextPage, handleBackPage, currentPage, pages }}
+      value={{
+        handleNextPage,
+        handleBackPage,
+        currentPage,
+        pages,
+        mostReadMangas,
+      }}
     >
       {children}
     </MostReadContext.Provider>

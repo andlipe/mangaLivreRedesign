@@ -4,7 +4,9 @@ import { Image } from '@shared/components'
 
 import * as S from './styles'
 export default function HomeMostRead() {
-  const { currentPage, pages, handleBackPage, handleNextPage } = useMostRead()
+  const { currentPage, pages, handleBackPage, handleNextPage, mostReadMangas } =
+    useMostRead()
+
   return (
     <S.Container>
       <S.HeaderSection>
@@ -28,9 +30,9 @@ export default function HomeMostRead() {
         </S.ArrowSection>
       </S.HeaderSection>
       <S.BodySection>
-        <MangaCard />
-        <MangaCard />
-        <MangaCard />
+        {mostReadMangas.map((manga) => (
+          <MangaCard key={manga.id} data={manga} />
+        ))}
       </S.BodySection>
     </S.Container>
   )
