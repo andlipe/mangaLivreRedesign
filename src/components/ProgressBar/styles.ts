@@ -5,7 +5,7 @@ interface IProps {
   currentPage?: number
 }
 
-export const Container = styled.div<IProps>`
+export const Container = styled.article<IProps>`
   position: relative;
   background-color: ${({ theme }) => theme.palette.background.blue};
   width: 100%;

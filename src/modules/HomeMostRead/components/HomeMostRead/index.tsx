@@ -1,4 +1,4 @@
-import { ProgressBar } from '@components/index'
+import { ProgressBar, MangaCard } from '@components/index'
 import { useMostRead } from '../../hooks/useMostRead'
 import { Image } from '@shared/components'
 
@@ -27,6 +27,9 @@ export default function HomeMostRead() {
           </S.Arrow>
         </S.ArrowSection>
       </S.HeaderSection>
+      <S.BodySection>
+        <MangaCard />
+      </S.BodySection>
     </S.Container>
   )
 }
