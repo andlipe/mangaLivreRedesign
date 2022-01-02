@@ -3,9 +3,11 @@ import styled from 'styled-components'
 export const Container = styled.article`
   background-color: ${({ theme }) => theme.palette.common.white};
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.05);
-  width: max-content;
+  min-width: 530px;
   display: flex;
   margin-right: 5rem;
+  margin-bottom: 1rem;
+  white-space: initial;
 `
 
 export const ImageContainer = styled.section``

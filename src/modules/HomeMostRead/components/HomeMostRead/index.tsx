@@ -4,9 +4,15 @@ import { Image } from '@shared/components'
 
 import * as S from './styles'
 export default function HomeMostRead() {
-  const { currentPage, pages, handleBackPage, handleNextPage, mostReadMangas } =
-    useMostRead()
-
+  const {
+    currentPage,
+    pages,
+    handleBackPage,
+    handleNextPage,
+    mostReadMangas,
+    scrollDiv,
+  } = useMostRead()
+  console.log(scrollDiv)
   return (
     <S.Container>
       <S.HeaderSection>
@@ -29,7 +35,7 @@ export default function HomeMostRead() {
           </S.Arrow>
         </S.ArrowSection>
       </S.HeaderSection>
-      <S.BodySection>
+      <S.BodySection ref={scrollDiv}>
         {mostReadMangas.map((manga) => (
           <MangaCard key={manga.id} data={manga} />
         ))}

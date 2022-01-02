@@ -3,6 +3,7 @@ import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 const initialState = {
   pages: 4,
   currentPage: 1,
+  maxScroll: 0,
 }
 
 export const homeMostReadSlice = createSlice({
@@ -18,10 +19,16 @@ export const homeMostReadSlice = createSlice({
         state.currentPage = action.payload
       }
     },
+    setPages: (state, action: PayloadAction<number>) => {
+      state.pages = action.payload
+    },
+    setMaxScroll: (state, action: PayloadAction<number>) => {
+      state.maxScroll = action.payload
+    },
   },
 })
 
 // Action creators are generated for each case reducer function
-export const { changePage } = homeMostReadSlice.actions
+export const { changePage, setPages, setMaxScroll } = homeMostReadSlice.actions
 
 export default homeMostReadSlice.reducer

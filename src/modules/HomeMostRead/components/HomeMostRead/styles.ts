@@ -43,4 +43,6 @@ export const Arrow = styled.button`
 export const BodySection = styled.section`
   margin-top: 3rem;
   display: flex;
+  overflow: hidden;
+  white-space: nowrap;
 `
