@@ -2,6 +2,9 @@ import styled from 'styled-components'
 
 export const Container = styled.section`
   padding: 8rem 0 8rem 12rem;
+  @media screen and (max-width: 768px) {
+    padding: 2rem;
+  }
 `
 
 export const HeaderSection = styled.div`
@@ -10,6 +13,13 @@ export const HeaderSection = styled.div`
   grid-template-areas: 'title bar arrows';
   grid-template-columns: max-content 3fr 1fr;
   column-gap: 4rem;
+
+  @media screen and (max-width: 480px) {
+    grid-template-areas:
+      'title title'
+      'bar arrows';
+    grid-template-columns: 3fr 1fr;
+  }
 `
 
 export const SectionTitle = styled.h1`
@@ -17,6 +27,9 @@ export const SectionTitle = styled.h1`
   font-family: ${({ theme }) => theme.fonts.default};
   color: ${({ theme }) => theme.palette.common.black};
   grid-area: title;
+  @media screen and (max-width: 480px) {
+    font-size: 3rem;
+  }
 `
 
 export const ArrowSection = styled.div`
@@ -26,3 +39,5 @@ export const ArrowSection = styled.div`
 export const Arrow = styled.button`
   cursor: pointer;
 `
+
+export const BodySection = styled.div``
