@@ -22,3 +22,7 @@ export const SectionTitle = styled.h1`
 export const ArrowSection = styled.div`
   grid-area: arrows;
 `
+
+export const Arrow = styled.button`
+  cursor: pointer;
+`

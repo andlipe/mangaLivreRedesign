@@ -5,7 +5,7 @@ import {
   setHighlightedMangas,
   IHighlightsMangas,
 } from '@modules/HomeHighlight'
-import { HomeMostRead } from '@modules/HomeMostRead'
+import { HomeMostRead, MostReadProvider } from '@modules/HomeMostRead'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import * as S from './styles'
@@ -20,12 +20,14 @@ export default function Home({ highLightedMangas }: Props) {
     dispatch(setHighlightedMangas(highLightedMangas))
   }, [])
   return (
-    <HighlightProvider>
-      <S.Container>
+    <S.Container>
+      <HighlightProvider>
         <HomeHighlight />
+      </HighlightProvider>
+      <MostReadProvider>
         <HomeMostRead />
-      </S.Container>
-    </HighlightProvider>
+      </MostReadProvider>
+    </S.Container>
   )
 }
 

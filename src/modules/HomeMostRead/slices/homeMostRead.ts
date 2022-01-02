@@ -1,8 +1,8 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 
 const initialState = {
-  pages: 1,
-  currentPage: 4,
+  pages: 4,
+  currentPage: 1,
 }
 
 export const homeMostReadSlice = createSlice({
@@ -12,8 +12,11 @@ export const homeMostReadSlice = createSlice({
     changePage: (state, action: PayloadAction<number>) => {
       if (action.payload > state.pages) {
         state.currentPage = 1
+      } else if (action.payload < 1) {
+        state.currentPage = state.pages
+      } else {
+        state.currentPage = action.payload
       }
-      state.currentPage = action.payload
     },
   },
 })

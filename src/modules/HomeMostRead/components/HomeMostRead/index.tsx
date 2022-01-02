@@ -1,28 +1,30 @@
 import { ProgressBar } from '@components/index'
+import { useMostRead } from '../../hooks/useMostRead'
 import { Image } from '@shared/components'
 
 import * as S from './styles'
 export default function HomeMostRead() {
+  const { currentPage, pages, handleBackPage, handleNextPage } = useMostRead()
   return (
     <S.Container>
       <S.HeaderSection>
         <S.SectionTitle>MAIS LIDOS DA SEMANA</S.SectionTitle>
-        <ProgressBar pages={4} currentPage={1} />
+        <ProgressBar pages={pages} currentPage={currentPage} />
         <S.ArrowSection>
-          <button>
+          <S.Arrow onClick={() => handleBackPage()}>
             <Image
               src={require('@assets/icons/arrow-left.svg')}
               width={10}
               height={15}
             />
-          </button>
-          <button>
+          </S.Arrow>
+          <S.Arrow onClick={() => handleNextPage()}>
             <Image
               src={require('@assets/icons/arrow-right.svg')}
               width={10}
               height={15}
             />
-          </button>
+          </S.Arrow>
         </S.ArrowSection>
       </S.HeaderSection>
     </S.Container>
