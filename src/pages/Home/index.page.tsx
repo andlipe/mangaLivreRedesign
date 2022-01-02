@@ -5,6 +5,7 @@ import {
   setHighlightedMangas,
   IHighlightsMangas,
 } from '@modules/HomeHighlight'
+import { HomeMostRead } from '@modules/HomeMostRead'
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import * as S from './styles'
@@ -22,6 +23,7 @@ export default function Home({ highLightedMangas }: Props) {
     <HighlightProvider>
       <S.Container>
         <HomeHighlight />
+        <HomeMostRead />
       </S.Container>
     </HighlightProvider>
   )
