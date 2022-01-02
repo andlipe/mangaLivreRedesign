@@ -1,3 +1,4 @@
+import Stars from '@components/Stars'
 import { Image } from '@shared/components'
 import * as S from './styles'
 export default function MangaCard() {
@@ -9,6 +10,7 @@ export default function MangaCard() {
       <S.InfoContainer>
         <S.Category>Ação</S.Category>
         <S.Title>ONE PIECE</S.Title>
+        <Stars value={4.5} />
         <S.Description>
           One Piece começa quando Gol D. Roger, o Rei Dos Piratas que possuiu
           tudo nesse mundo, antes de ser executado...

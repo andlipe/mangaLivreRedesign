@@ -31,7 +31,6 @@ export const Title = styled.h3`
 
 export const Description = styled.p`
   font-size: 1.5rem;
-  word-break: break-all;
   margin-top: 2rem;
   margin-bottom: 3rem;
 `
