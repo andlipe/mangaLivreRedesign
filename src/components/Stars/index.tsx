@@ -11,12 +11,14 @@ interface IStars {
 export default function Stars({ value }: IStars) {
   const renderStars = useCallback(() => {
     const stars = []
-    for (let i = 1; i <= value + 1; i++) {
-      if (i >= value && value < 5) {
+    for (let i = 1; i < value + 1; i++) {
+      if (i > value && value < 5) {
         stars.push(<Image key={i} src={HalfStar} width={16} height={16} />)
         break
       }
-      stars.push(<Image key={i} src={Star} width={16} height={16} />)
+      if (i <= 5) {
+        stars.push(<Image key={i} src={Star} width={16} height={16} />)
+      }
     }
     return stars
   }, [value])
